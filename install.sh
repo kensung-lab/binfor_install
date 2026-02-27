@@ -12,13 +12,6 @@ bash $INSTALLER -b -u -p $CONDA_PATH
 $CONDA_PATH/bin/conda init bash
 source ~/.bashrc
 
-echo "Done！"
-echo "------------------------------------------------------------"
-echo "Miniconda installation is complete!"
-echo "IMPORTANT: To start using conda, please run the command below:"
-echo "source ~/.bashrc"
-echo "------------------------------------------------------------"
-
 source "$CONDA_PATH/etc/profile.d/conda.sh"
 
 conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
@@ -29,3 +22,9 @@ conda install -c bioconda -c conda-forge samtools -y
 conda install -c conda-forge ncurses --force-reinstall -y
 conda install -c bioconda -c conda-forge fastqc -y
 
+echo "Done！"
+echo "------------------------------------------------------------"
+echo "Installation is complete!"
+echo "IMPORTANT: To start using tools, please run the command below:"
+echo "source ~/.bashrc"
+echo "------------------------------------------------------------"
